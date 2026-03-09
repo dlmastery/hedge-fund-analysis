@@ -143,8 +143,33 @@ Color-coded cells.
 Each agent's full analysis in `<details><summary>` tags:
 - Collapsed by default for scannability
 - Full findings when expanded
+- **Each section MUST include a "Sources & Working Documents" footer** with:
+  - Link/path to the agent's `findings.md` file
+  - Link/path to the agent's `sources.json` file
+  - Inline citation count: "Based on X sources"
 
-#### 16. Floating Table of Contents
+#### 16. Source Traceability & Citation Index
+A dedicated section at the bottom of the report with:
+- **Complete source index**: every URL cited across all 14 agents, deduplicated
+- **Working document links**: relative paths to all intermediate artifacts:
+  ```
+  📁 Working Documents
+  ├── agents/01-forensic-accountant/findings.md (X sources)
+  ├── agents/02-competitive-moat/findings.md (X sources)
+  ├── ... (all 14 agents)
+  ├── synthesis/cross-references.md
+  ├── synthesis/contradictions.md
+  ├── synthesis/variant-perception.md
+  └── synthesis/consolidated-findings.md
+  ```
+- **Methodology note**: which agents contributed to each finding
+- **Data freshness**: most recent data point date per section
+- **Confidence matrix**: data availability × recency × confidence per agent
+
+Every claim in the report should be traceable:
+`Finding → Agent findings.md → sources.json → original URL`
+
+#### 17. Floating Table of Contents
 Sticky sidebar or top nav with links to each section.
 Highlights current section on scroll.
 

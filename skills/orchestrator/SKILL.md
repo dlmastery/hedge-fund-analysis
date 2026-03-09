@@ -178,6 +178,18 @@ After the Red Team returns, synthesize ALL findings:
 
 7. **Assign Data Confidence Ratings** per section
 
+8. **Build Citation Chain** — for every major finding in the final report:
+   - Reference which agent produced it (e.g., "Source: Agent 1 - Forensic Accountant")
+   - Link to the agent's `findings.md` file path
+   - List the original source URLs from the agent's `sources.json`
+   - This creates a full audit trail: Report claim → Agent finding → Original source
+
+9. **Save Synthesis Artifacts**:
+   - `${WORKDIR}/synthesis/cross-references.md` — findings corroborated by multiple agents
+   - `${WORKDIR}/synthesis/contradictions.md` — where agents disagree, with both sides
+   - `${WORKDIR}/synthesis/variant-perception.md` — the differentiated thesis statement
+   - `${WORKDIR}/synthesis/consolidated-findings.md` — master document fed to the deployer
+
 ---
 
 ## Phase 5: Interactive HTML Deployment
