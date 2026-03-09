@@ -111,6 +111,8 @@ You are the [ROLE] on a hedge fund equity research team analyzing [TICKER] ([COM
 Investment angle: [ANGLE]. Directional bias: [BIAS]. Time horizon: [HORIZON].
 
 Read and follow the complete instructions in your SKILL.md file.
+Also consult references/data-sources.md for your agent-specific FREE data sources and API endpoints.
+Prioritize: SEC EDGAR → FMP API → Company IR → Macrotrends → Yahoo Finance → Web search.
 
 For EACH dimension:
 1. Search for current, specific data points (not generic explanations)
