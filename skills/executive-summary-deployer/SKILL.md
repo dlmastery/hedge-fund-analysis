@@ -47,7 +47,7 @@ dependencies except CDN-hosted Chart.js. Must work offline after initial CDN loa
 Compact grid showing at-a-glance:
 ```
 [COMPANY NAME] ([TICKER]) — Institutional Deep Dive
-Report Date | Analyst: Multi-Agent System (14 Agents)
+Report Date | Analyst: Multi-Agent System (15 Agents)
 Classification: INTERNAL USE ONLY — NOT INVESTMENT ADVICE
 
 Current Price: $XX.XX    |  Market Cap: $XX.XB   |  52-Week: $XX - $XX
@@ -63,10 +63,11 @@ A visual grid where each analysis dimension is a colored cell:
 - **RED** = Contradicts thesis / significant risk
 - **GRAY** = Insufficient data
 
-Dimensions (14 cells matching agents):
+Dimensions (15 cells matching agents):
 Forensic Accounting | Competitive Moat | Governance | Positioning | Alt Data |
 Macro/Scenarios | Future Optionality | Narrative | Capital Structure |
-Corporate Structure | Scuttlebutt | Balance Sheet | Customer Economics | Red Team
+Corporate Structure | Scuttlebutt | Balance Sheet | Customer Economics |
+Industry & Disruption | Red Team
 
 Each cell clickable to scroll to that section.
 
@@ -150,13 +151,13 @@ Each agent's full analysis in `<details><summary>` tags:
 
 #### 16. Source Traceability & Citation Index
 A dedicated section at the bottom of the report with:
-- **Complete source index**: every URL cited across all 14 agents, deduplicated
+- **Complete source index**: every URL cited across all 15 agents, deduplicated
 - **Working document links**: relative paths to all intermediate artifacts:
   ```
   📁 Working Documents
   ├── agents/01-forensic-accountant/findings.md (X sources)
   ├── agents/02-competitive-moat/findings.md (X sources)
-  ├── ... (all 14 agents)
+  ├── ... (all 15 agents)
   ├── synthesis/cross-references.md
   ├── synthesis/contradictions.md
   ├── synthesis/variant-perception.md

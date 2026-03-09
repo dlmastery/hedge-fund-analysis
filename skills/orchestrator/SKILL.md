@@ -2,7 +2,7 @@
 name: hedge-fund-orchestrator
 description: >
   Parent orchestrator for institutional-grade hedge fund equity analysis.
-  Coordinates 14 specialist sub-agents across 4 phases to produce a 50+ dimension
+  Coordinates 15 specialist sub-agents across 5 phases to produce a 80+ dimension
   research report that rivals internal hedge fund memos at Citadel, Point72, or Millennium.
   Trigger on: "analyze [ticker]", "deep dive on [company]", "hedge fund analysis",
   "institutional research", "stock deep dive", "variant perception", "investment thesis".
@@ -10,13 +10,13 @@ description: >
 
 # Hedge Fund-Grade Equity Analysis — Parent Orchestrator
 
-You are the lead portfolio analyst orchestrating a team of 14 specialist agents to produce
+You are the lead portfolio analyst orchestrating a team of 15 specialist agents to produce
 an institutional-quality research report. The output should contain insights and analytical
 depth that cannot be purchased from any sell-side desk or retail research provider.
 
 ## Orchestration Architecture
 
-**Phase 1: Scoping** → **Phase 2: 13 Parallel Agents** → **Phase 3: Red Team (sequential)** →
+**Phase 1: Scoping** → **Phase 2: 14 Parallel Agents** → **Phase 3: Red Team (sequential)** →
 **Phase 4: Synthesis** → **Phase 5: Interactive HTML Deployment**
 
 ---
@@ -54,7 +54,8 @@ mkdir -p "${WORKDIR}/agents/10-corporate-structure"
 mkdir -p "${WORKDIR}/agents/11-scuttlebutt"
 mkdir -p "${WORKDIR}/agents/12-balance-sheet-quality"
 mkdir -p "${WORKDIR}/agents/13-customer-unit-economics"
-mkdir -p "${WORKDIR}/agents/14-red-team"
+mkdir -p "${WORKDIR}/agents/14-industry-disruption"
+mkdir -p "${WORKDIR}/agents/15-red-team"
 mkdir -p "${WORKDIR}/synthesis"
 mkdir -p "${WORKDIR}/deploy"
 ```
@@ -79,9 +80,9 @@ This ensures every intermediate artifact is preserved for auditability.
 
 ---
 
-## Phase 2: Parallel Research — Launch ALL 13 Agents Simultaneously
+## Phase 2: Parallel Research — Launch ALL 14 Agents Simultaneously
 
-Launch all 13 agents in a SINGLE message using 13 `Task` tool calls with
+Launch all 14 agents in a SINGLE message using 14 `Task` tool calls with
 `subagent_type: "general-purpose"`. These are fully independent — zero cross-dependencies.
 
 For each agent, read its SKILL.md from the corresponding sub-skill directory and inject
@@ -102,6 +103,7 @@ the scoping variables into the prompt template.
 | 11 | Scuttlebutt & Primary Research | `skills/scuttlebutt/SKILL.md` | Customer/employee/supplier intelligence, expert call design, field research playbook |
 | 12 | Balance Sheet Quality | `skills/balance-sheet-quality/SKILL.md` | Asset realization risk, goodwill exposure, working capital benchmarking, reserve trends |
 | 13 | Customer Unit Economics | `skills/customer-unit-economics/SKILL.md` | Cohort retention, concentration dynamics, win/loss patterns, LTV/CAC forensics |
+| 14 | Industry & Disruption Landscape | `skills/industry-disruption/SKILL.md` | Industry lifecycle, AI disruption, platform shifts, value chain migration, competitive benchmarking, regulatory trajectory |
 
 **Agent Prompt Template (inject into each):**
 ```
@@ -135,7 +137,7 @@ If data is unavailable for a dimension, say so explicitly — never pad with gen
 
 ## Phase 3: Red Team / Pre-Mortem (Sequential — Needs Phase 2 Output)
 
-After ALL 13 agents return, launch **Agent 14: Red Team / Pre-Mortem Devil's Advocate**.
+After ALL 14 agents return, launch **Agent 15: Red Team / Pre-Mortem Devil's Advocate**.
 
 Read `skills/red-team/SKILL.md` for the complete prompt. This agent receives a CONSOLIDATED
 SUMMARY of all 13 agents' findings and systematically attacks every conclusion.
@@ -144,9 +146,9 @@ This CANNOT run in parallel — it requires all Phase 2 outputs as input.
 
 Pass to the Red Team agent:
 ```
-Here are the consolidated findings from 13 specialist analysts on [TICKER]:
+Here are the consolidated findings from 14 specialist analysts on [TICKER]:
 
-[PASTE SUMMARIES FROM ALL 13 AGENTS]
+[PASTE SUMMARIES FROM ALL 14 AGENTS]
 
 Your job: assume the thesis is WRONG. Destroy every conclusion. Find the holes.
 Follow the complete Red Team methodology in your SKILL.md.

@@ -2,10 +2,11 @@
 name: hedge-fund-analysis
 description: >
   Produce institutional-grade, hedge-fund-quality deep research reports on any public equity.
-  Orchestrates 14 specialist AI agents across 50+ analytical dimensions — forensic accounting,
+  Orchestrates 15 specialist AI agents across 80+ analytical dimensions — forensic accounting,
   competitive moat, governance forensics, quant positioning, alternative data, macro scenarios,
   future optionality decoding, narrative forensics, capital structure, corporate structure
   investigation, scuttlebutt research, balance sheet quality, customer unit economics,
+  industry & disruption landscape (AI disruption, platform shifts, value chain migration),
   and red-team/pre-mortem analysis. Generates an interactive HTML dashboard deployable
   as a web directory (<TICKER>-YYYYMMDD-HHmmss/). Use this skill for deep stock analysis,
   hedge fund style research, institutional equity research, variant perception analysis,
@@ -41,7 +42,8 @@ hedge-fund-analysis/
 │   ├── scuttlebutt/SKILL.md              ← Agent 11: Customer/employee/supplier intel
 │   ├── balance-sheet-quality/SKILL.md    ← Agent 12: Asset risk, goodwill, working capital
 │   ├── customer-unit-economics/SKILL.md  ← Agent 13: Cohorts, LTV/CAC, concentration
-│   ├── red-team/SKILL.md                 ← Agent 14: Pre-mortem, thesis destruction
+│   ├── industry-disruption/SKILL.md      ← Agent 14: AI disruption, platform shifts, value chain
+│   ├── red-team/SKILL.md                 ← Agent 15: Pre-mortem, thesis destruction
 │   └── executive-summary-deployer/SKILL.md ← HTML dashboard generator & deployer
 └── references/
     ├── report-template.md                ← HTML report section structure reference
@@ -52,8 +54,8 @@ hedge-fund-analysis/
 ## Execution Flow
 
 1. **Phase 1 — Scoping**: Collect ticker, angle, bias, horizon from user
-2. **Phase 2 — Parallel Research**: Launch 13 agents simultaneously (zero cross-dependencies)
-3. **Phase 3 — Red Team**: Agent 14 receives all findings and attacks every conclusion
+2. **Phase 2 — Parallel Research**: Launch 14 agents simultaneously (zero cross-dependencies)
+3. **Phase 3 — Red Team**: Agent 15 receives all findings and attacks every conclusion
 4. **Phase 4 — Synthesis**: Cross-reference, resolve contradictions, build variant perception
 5. **Phase 5 — Deploy**: Generate interactive HTML dashboard in `<TICKER>-YYYYMMDD-HHmmss/`
 
@@ -71,7 +73,10 @@ Each run creates a timestamped directory with full artifact traceability:
 │   │   ├── findings.md
 │   │   └── sources.json
 │   ├── ... (03 through 13)
-│   └── 14-red-team/
+│   ├── 14-industry-disruption/
+│   │   ├── findings.md
+│   │   └── sources.json
+│   └── 15-red-team/
 │       ├── findings.md
 │       └── sources.json
 ├── synthesis/
@@ -152,11 +157,24 @@ Each run creates a timestamped directory with full artifact traceability:
 | 61 | Cohort retention & NRR tracking (NEW) | Customer Unit Economics |
 | 62 | LTV/CAC forensics (NEW) | Customer Unit Economics |
 | 63 | Pricing power assessment (NEW) | Customer Unit Economics |
-| 64 | Pre-mortem failure narratives (top 5) | Red Team |
-| 65 | Confirmation bias audit | Red Team |
-| 66 | Multi-order risk chain mapping | Red Team |
-| 67 | Position sizing & Kelly criterion | Red Team |
-| 68 | Monitoring dashboard design | Red Team |
+| 64 | Industry lifecycle stage assessment | Industry & Disruption |
+| 65 | Secular trend mapping (5-10 year) | Industry & Disruption |
+| 66 | AI/ML disruption analysis (threat + opportunity + infrastructure) | Industry & Disruption |
+| 67 | Technology platform shift detection (cloud, edge, quantum, robotics) | Industry & Disruption |
+| 68 | Adjacent industry disruption & contagion | Industry & Disruption |
+| 69 | Value chain migration analysis | Industry & Disruption |
+| 70 | Competitive deep benchmarking matrix (quantitative) | Industry & Disruption |
+| 71 | Industry consolidation & M&A cycle | Industry & Disruption |
+| 72 | Regulatory regime evolution trajectory | Industry & Disruption |
+| 73 | Industry technology roadmap & standards evolution | Industry & Disruption |
+| 74 | Geopolitical reshoring & supply chain reorganization | Industry & Disruption |
+| 75 | ESG as industry structural force | Industry & Disruption |
+| 76 | Industry expert consensus vs. variant view | Industry & Disruption |
+| 77 | Pre-mortem failure narratives (top 5) | Red Team |
+| 78 | Confirmation bias audit | Red Team |
+| 79 | Multi-order risk chain mapping | Red Team |
+| 80 | Position sizing & Kelly criterion | Red Team |
+| 81 | Monitoring dashboard design | Red Team |
 
 ## Installation
 
