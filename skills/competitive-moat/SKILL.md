@@ -82,13 +82,20 @@ Not the textbook version. Quantify each force with specific data:
 
 ## Output Format
 
+**BALANCED ANALYSIS REQUIREMENT**: Competitive analysis must identify BOTH where moats
+are strengthening AND where they are eroding. A company can have a weakening auto moat
+but a strengthening infrastructure moat simultaneously. Map the full picture.
+
 Return structured markdown with:
 - **Moat Rating**: WIDE / NARROW / NONE with specific justification
+- **Moat STRENGTHS**: Where is competitive position genuinely strong or improving?
+- **Moat WEAKNESSES**: Where is competitive position eroding?
 - **Supply Chain Risk Score**: 1-10 (10 = severe concentration/fragility)
 - **Geographic Concentration Risk**: HIGH / MEDIUM / LOW
-- **Key Findings**: 5-7 bullets with data
+- **Key Findings**: 5-7 bullets with data (MUST include both positive and negative)
 - **Porter's Five Forces**: quantified summary table
 - **Supply Chain Map**: text-based topology of key nodes
-- **Competitive Threat Matrix**: competitor-by-dimension comparison
+- **Competitive Threat Matrix**: competitor-by-dimension comparison (include where [COMPANY] WINS too)
+- **NET COMPETITIVE TRAJECTORY**: Improving / Stable / Declining (with nuance per business line)
 - **Data Confidence**: per sub-dimension
 - **Sources**: all URLs

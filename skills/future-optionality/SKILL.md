@@ -110,14 +110,28 @@ Map the dependency tree:
 
 ## Output Format
 
+**CRITICAL — OPTIONALITY MUST BE PROPERLY VALUED, NOT DISMISSED:**
+Many analysts dismiss optionality as "speculative" and assign zero value. This is WRONG.
+Options have positive expected value by definition. The question is whether the MARKET is
+over- or under-pricing the option, not whether the option has value.
+
+Use BOTH approaches:
+1. **Risk-adjusted SOTP** (probability × value) — conservative
+2. **Real options framework** (Black-Scholes-style) — captures time value and volatility
+3. **Compare to what market actually prices** — the gap between 1/2 and market is the variant view
+
+If the market prices $200/share of optionality and your risk-adjusted value is $150, the stock
+is only 25% overpriced on optionality — NOT "speculative garbage." Be precise.
+
 Return structured markdown with:
 - **Optionality Premium**: $XB (X% of market cap paying for unproven business)
+- **Optionality Fair Value**: your estimate vs. what the market currently prices (gap = opportunity)
 - **SOTP Decomposition Table**: full table as above
 - **S-Curve Position Map**: each business line plotted
 - **Execution Milestone Tracker**: promise vs. delivery for each initiative
 - **Flywheel Diagram**: text-based mapping of feedback loops
 - **Implied Expectations Reality Check**: what MUST go right at current price
-- **Comparable Optionality Analysis**: historical analogues and outcomes
+- **Comparable Optionality Analysis**: historical analogues — INCLUDE SUCCESSES (Amazon AWS, Apple iPhone) not just failures
 - **Real Options Summary**: option-theoretic assessment of each future business
 - **Key Insight**: one paragraph on what the SOTP analysis reveals about mispricing
 - **Data Confidence**: per sub-dimension

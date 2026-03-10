@@ -244,6 +244,23 @@ These sources are fully open with no registration:
 
 ---
 
+## Agent 15: CEO / Founder Ecosystem
+
+| Dimension | Free Source | URL Pattern |
+|-----------|-----------|-------------|
+| Multi-venture map | Wikipedia, Crunchbase | `en.wikipedia.org/wiki/[CEO_NAME]` |
+| Venture valuations | PitchBook news, TechCrunch | `techcrunch.com/tag/[company]` |
+| Political relationships | OpenSecrets, news | `opensecrets.org/` |
+| Political impact | News search | Web search: `[CEO] [COMPANY] political impact` |
+| Brand tracking | Brand Finance, Interbrand | Web search: `[COMPANY] brand value [YEAR]` |
+| Talent flows | LinkedIn (public), Glassdoor | `glassdoor.com/Reviews/[COMPANY]` |
+| Related party transactions | SEC EDGAR DEF 14A | `sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=[TICKER]&type=DEF+14A` |
+| CEO compensation | SEC EDGAR DEF 14A | Same as above |
+| CEO time allocation | News, interviews | Web search: `[CEO] time management schedule` |
+| Ecosystem synergies | Patent cross-references, news | Web search: `[COMPANY] [SISTER_COMPANY] collaboration` |
+
+---
+
 ## Data Quality Hierarchy
 
 When multiple sources exist, prefer in this order:

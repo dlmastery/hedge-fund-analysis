@@ -88,14 +88,21 @@ How do they frame the outlook?
 
 ## Output Format
 
+**BALANCED ANALYSIS REQUIREMENT**: Some visionary CEOs over-promise on timelines but STILL
+deliver transformative outcomes (e.g., Musk was years late on Model 3 volume but still
+revolutionized the auto industry). Track BOTH promise accuracy AND ultimate outcome quality.
+Late ≠ failed. A promise delivered 3 years late at 10x the expected scale is BETTER than
+a promise delivered on time at 0.5x scale. Assess both dimensions.
+
 Return structured markdown with:
 - **Narrative Credibility Score**: 1-10 (10 = highly credible, 1 = serial misleader)
-- **Promise Tracking Ledger**: table of major promises vs. outcomes
+- **Promise Tracking Ledger**: table with columns: Promise | Deadline | Delivered? | Delay | Ultimate Outcome Quality (1-10)
+- **Promises DELIVERED (even if late)**: What HAS the CEO accomplished? What big bets paid off?
+- **Promises FAILED**: What was abandoned or never delivered?
 - **Goal Post Movement Tracker**: specific instances with evidence
 - **Guidance Sandbagging Score**: statistical summary
 - **Language Shift Analysis**: key phrase evolution timeline
-- **Competitive Acknowledgment Trend**: dismissive → defensive progression
-- **Forward Guidance Framing**: optimism index trend
+- **NET CREDIBILITY**: Weighing both hits and misses — is the CEO more right than wrong over time?
 - **Key Insight**: what does the narrative pattern tell us about the next 12 months?
 - **Data Confidence**: per sub-dimension
 - **Sources**: all URLs (especially earnings call transcript sources)

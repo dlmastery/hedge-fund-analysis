@@ -105,12 +105,20 @@ filings (10-K, 10-Q, proxy statements), recent earnings reports, and audit discl
 
 ## Output Format
 
+**CRITICAL — BALANCED OUTPUT REQUIREMENT:**
+A forensic accountant at a top fund doesn't just find problems. They also identify
+WHY earnings are high quality when they are. Companies with genuine competitive advantages
+often have unusual-looking financials (e.g., negative working capital at Amazon, deferred
+revenue at SaaS companies). Context matters more than mechanical red flags.
+
 Return structured markdown with:
 - **Earnings Quality Score**: 1-10 (10 = pristine, 1 = severe red flags)
 - **Beneish M-Score**: calculated value and interpretation
 - **Sloan Accrual Ratio**: calculated value and 5-year trend
-- **Key Findings**: 5-7 bullet points, each with specific data
-- **Red Flags**: severity-rated (CRITICAL / WARNING / MONITOR)
+- **STRENGTHS (must include)**: What is genuinely strong about the financials? High FCF? Clean balance sheet? Conservative accounting?
+- **CONCERNS**: legitimate issues with severity ratings (CRITICAL / WARNING / MONITOR)
+- **CONTEXT**: Are the "red flags" explained by the business model? (e.g., deferred revenue is NORMAL for subscription businesses, high capex is NORMAL for growth companies)
 - **Accounting Policy Signals**: any shifts detected with interpretation
+- **NET ASSESSMENT**: Overall financial health weighing both strengths and concerns
 - **Data Confidence**: HIGH / MEDIUM / LOW per sub-dimension
 - **Sources**: all URLs and filing references

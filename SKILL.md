@@ -1,22 +1,32 @@
 ---
 name: hedge-fund-analysis
 description: >
-  Produce institutional-grade, hedge-fund-quality deep research reports on any public equity.
-  Orchestrates 15 specialist AI agents across 80+ analytical dimensions — forensic accounting,
+  Produce institutional-grade, BALANCED hedge-fund-quality deep research reports on any public equity.
+  Orchestrates 16 specialist AI agents across 90+ analytical dimensions — forensic accounting,
   competitive moat, governance forensics, quant positioning, alternative data, macro scenarios,
   future optionality decoding, narrative forensics, capital structure, corporate structure
   investigation, scuttlebutt research, balance sheet quality, customer unit economics,
-  industry & disruption landscape (AI disruption, platform shifts, value chain migration),
-  and red-team/pre-mortem analysis. Generates an interactive HTML dashboard deployable
-  as a web directory (<TICKER>-YYYYMMDD-HHmmss/). Use this skill for deep stock analysis,
-  hedge fund style research, institutional equity research, variant perception analysis,
-  investment thesis, or any request implying more than surface-level research.
+  industry & disruption landscape, CEO/founder ecosystem analysis,
+  and adversarial-balanced red-team analysis. Starts with consensus calibration, requires
+  agents to present BOTH strengths and weaknesses, and applies scenario sanity checks.
+  Generates an interactive HTML dashboard deployable as a web directory (<TICKER>-YYYYMMDD-HHmmss/).
+  Use this skill for deep stock analysis, hedge fund style research, institutional equity research,
+  variant perception analysis, investment thesis, or any request implying more than surface-level research.
 ---
 
 # Hedge Fund-Grade Equity Analysis System
 
-This is a **decomposed multi-skill system**. The parent orchestrator coordinates 14
-specialist sub-skills, each with its own SKILL.md containing complete instructions.
+This is a **decomposed multi-skill system**. The parent orchestrator coordinates 15
+specialist sub-skills + 1 adversarial-balance agent, each with its own SKILL.md.
+
+**v2.1 CHANGES (Balance & Calibration Update):**
+- Added Phase 0: Consensus Calibration — gathers analyst consensus BEFORE analysis starts
+- Added Agent 15: CEO/Founder Ecosystem — maps multi-venture synergies, political capital, brand impact
+- ALL agents now required to present BOTH strengths AND weaknesses (not just red flags)
+- Scenario agent has sanity guardrails (profitable $100B companies can't be base-cased at $35)
+- Red Team renamed "Adversarial Balance" — attacks BOTH bull and bear with equal force
+- Synthesis requires "Consensus Deviation Justification" for >40% deviations from Street
+- Future Optionality properly valued using real options framework (not dismissed as "speculative")
 
 ## Quick Start
 
@@ -43,7 +53,8 @@ hedge-fund-analysis/
 │   ├── balance-sheet-quality/SKILL.md    ← Agent 12: Asset risk, goodwill, working capital
 │   ├── customer-unit-economics/SKILL.md  ← Agent 13: Cohorts, LTV/CAC, concentration
 │   ├── industry-disruption/SKILL.md      ← Agent 14: AI disruption, platform shifts, value chain
-│   ├── red-team/SKILL.md                 ← Agent 15: Pre-mortem, thesis destruction
+│   ├── ceo-ecosystem/SKILL.md            ← Agent 15: CEO multi-venture synergies, political capital
+│   ├── red-team/SKILL.md                 ← Agent 16: Adversarial balance (attacks BOTH sides)
 │   └── executive-summary-deployer/SKILL.md ← HTML dashboard generator & deployer
 └── references/
     ├── report-template.md                ← HTML report section structure reference
@@ -53,10 +64,11 @@ hedge-fund-analysis/
 
 ## Execution Flow
 
-1. **Phase 1 — Scoping**: Collect ticker, angle, bias, horizon from user
-2. **Phase 2 — Parallel Research**: Launch 14 agents simultaneously (zero cross-dependencies)
-3. **Phase 3 — Red Team**: Agent 15 receives all findings and attacks every conclusion
-4. **Phase 4 — Synthesis**: Cross-reference, resolve contradictions, build variant perception
+0. **Phase 0 — Consensus Calibration**: Gather analyst consensus PT, ratings, top bull/bear theses
+1. **Phase 1 — Scoping**: Collect ticker, angle, bias (default: NEUTRAL), horizon from user
+2. **Phase 2 — Parallel Research**: Launch 15 agents simultaneously (zero cross-dependencies)
+3. **Phase 3 — Adversarial Balance**: Agent 16 stress-tests BOTH bull and bear cases equally
+4. **Phase 4 — Synthesis**: Cross-reference, resolve contradictions, consensus deviation check
 5. **Phase 5 — Deploy**: Generate interactive HTML dashboard in `<TICKER>-YYYYMMDD-HHmmss/`
 
 ## Working Directory Structure (per analysis run)
@@ -76,7 +88,10 @@ Each run creates a timestamped directory with full artifact traceability:
 │   ├── 14-industry-disruption/
 │   │   ├── findings.md
 │   │   └── sources.json
-│   └── 15-red-team/
+│   ├── 15-ceo-ecosystem/
+│   │   ├── findings.md
+│   │   └── sources.json
+│   └── 16-red-team/
 │       ├── findings.md
 │       └── sources.json
 ├── synthesis/
@@ -90,7 +105,7 @@ Each run creates a timestamped directory with full artifact traceability:
     └── metadata.json           ← Report metadata
 ```
 
-## Analytical Dimensions (50+)
+## Analytical Dimensions (93)
 
 | # | Dimension | Agent |
 |---|-----------|-------|
@@ -170,11 +185,23 @@ Each run creates a timestamped directory with full artifact traceability:
 | 74 | Geopolitical reshoring & supply chain reorganization | Industry & Disruption |
 | 75 | ESG as industry structural force | Industry & Disruption |
 | 76 | Industry expert consensus vs. variant view | Industry & Disruption |
-| 77 | Pre-mortem failure narratives (top 5) | Red Team |
-| 78 | Confirmation bias audit | Red Team |
-| 79 | Multi-order risk chain mapping | Red Team |
-| 80 | Position sizing & Kelly criterion | Red Team |
-| 81 | Monitoring dashboard design | Red Team |
+| 77 | Multi-venture ecosystem map & synergy assessment | CEO Ecosystem |
+| 78 | Technology & IP cross-venture synergies | CEO Ecosystem |
+| 79 | Talent gravity & brain drain analysis | CEO Ecosystem |
+| 80 | Political capital & government relations impact | CEO Ecosystem |
+| 81 | Brand halo / brand drag analysis | CEO Ecosystem |
+| 82 | CEO attention allocation risk | CEO Ecosystem |
+| 83 | Related entity optionality (spin-offs, integrations) | CEO Ecosystem |
+| 84 | Succession scenario analysis (upside & downside) | CEO Ecosystem |
+| 85 | Related party transaction deep dive | CEO Ecosystem |
+| 86 | Ecosystem valuation premium / discount | CEO Ecosystem |
+| 87 | Pre-mortem narratives (bull AND bear, top 3 each) | Red Team |
+| 88 | Confirmation bias audit (detect AGENT bias) | Red Team |
+| 89 | Consensus calibration & deviation justification | Red Team |
+| 90 | Multi-order risk AND opportunity chains | Red Team |
+| 91 | Scenario probability sanity check | Red Team |
+| 92 | Position sizing & Kelly criterion (both directions) | Red Team |
+| 93 | Monitoring dashboard design | Red Team |
 
 ## Installation
 
