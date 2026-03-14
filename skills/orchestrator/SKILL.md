@@ -26,8 +26,16 @@ weighs bull AND bear factors equally. The system should:
 
 ## Orchestration Architecture
 
-**Phase 1: Scoping** → **Phase 2: 14 Parallel Agents** → **Phase 3: Red Team (sequential)** →
-**Phase 4: Synthesis** → **Phase 5: Interactive HTML Deployment**
+**Phase 0: Consensus Calibration** → **Phase 1: Scoping** → **Phase 2: 14 Parallel Agents** →
+**Phase 3: Red Team (sequential)** → **Phase 4: Synthesis** → **Phase 5: HTML + Agent Reports + Excel Model** →
+**Phase 6: QA Audit (blocks delivery until all checks pass)**
+
+### Agent Roster (17 Total)
+| # | Agent | Phase | Type |
+|---|-------|-------|------|
+| 1-15 | Research Agents | Phase 2 (parallel) | Analysis |
+| 16 | Red Team | Phase 3 (sequential) | Adversarial |
+| 17 | QA Auditor | Phase 6 (final gate) | Verification |
 
 ---
 
@@ -137,6 +145,12 @@ the scoping variables into the prompt template.
 | 13 | Customer Unit Economics | `skills/customer-unit-economics/SKILL.md` | Cohort retention, concentration dynamics, win/loss patterns, LTV/CAC forensics |
 | 14 | Industry & Disruption Landscape | `skills/industry-disruption/SKILL.md` | Industry lifecycle, AI disruption, platform shifts, value chain migration, competitive benchmarking, regulatory trajectory |
 | 15 | CEO / Founder Ecosystem | `skills/ceo-ecosystem/SKILL.md` | Multi-venture synergies, political capital, talent gravity, brand halo/drag, attention allocation, related entity optionality |
+
+*Phase 3 (sequential):*
+| 16 | Red Team / Adversarial | `skills/red-team/SKILL.md` | Stress-test bull AND bear cases, kill criteria, position sizing |
+
+*Phase 6 (final gate):*
+| 17 | QA Auditor | `skills/qa-auditor/SKILL.md` | 5-pass verification: Excel integrity, HTML check, agent completeness, cross-artifact consistency, remediation |
 
 **Agent Prompt Template (inject into each):**
 ```
@@ -399,6 +413,101 @@ research systematically tracks. It MUST include:
 Save two copies:
 - **Filled**: `${WORKDIR}/${TICKER}-financial-model.xlsx` (with company data)
 - **Template**: `templates/financial-model-template.xlsx` (reusable blank)
+
+---
+
+## Phase 6: Audit & Quality Assurance (REQUIRED — Final Gate)
+
+After ALL deliverables are generated (HTML dashboard, agent .md files, Excel model),
+launch **Agent 17: QA Auditor** to verify artifact integrity before delivery.
+
+Read `skills/qa-auditor/SKILL.md` for the complete audit methodology.
+
+This agent performs 5 automated verification passes:
+
+### Pass 1: Excel Model Integrity
+```python
+# Automated checks:
+1. Load workbook and verify 14 tabs exist by name
+2. Run recalc.py and confirm 0 formula errors
+3. Verify all Assumptions cells are populated (no None/empty where values expected)
+4. Check scenario probabilities sum to 100% (=SUM should equal 1.0)
+5. Verify IFERROR wraps on all division formulas
+6. Confirm color coding: blue inputs, black formulas, green cross-sheet refs
+7. Verify tab colors are applied to all sheets
+8. Check DCF assumptions populated (Risk-Free Rate, ERP, Beta, Terminal Growth)
+9. Verify number formatting (currency, percentages, multiples)
+```
+
+### Pass 2: Dashboard HTML Verification
+```python
+# Automated checks:
+1. Count <section> tags — must be ≥12
+2. Verify Chart.js CDN loads (search for chart.js URL)
+3. Count Chart instances (new Chart()) — must be ≥3
+4. Check all 16 agents appear in conviction heatmap
+5. Verify appendix section exists with 16 agent links
+6. Verify link to Excel file exists
+7. Check HTML tag closure (section/div/table counts match)
+8. Verify dark theme CSS is applied
+```
+
+### Pass 3: Agent Report Completeness
+```python
+# Automated checks:
+1. Verify 16 .md files exist (01 through 16)
+2. For each file, confirm presence of:
+   - Score line (X/10)
+   - Confidence level (HIGH/MEDIUM/LOW)
+   - "Key Findings" section
+   - "Strengths" subsection
+   - "Concerns" subsection
+   - "Key Metrics" table (|---|)
+   - "Net Assessment" section
+   - "Sources" section
+3. Flag any file missing required sections
+```
+
+### Pass 4: Cross-Artifact Consistency
+```python
+# THE MOST CRITICAL CHECK:
+1. Extract all 16 agent scores from:
+   - Each agent .md file header
+   - Dashboard HTML heatmap
+   - Excel Agent Scores tab
+2. Verify ALL THREE sources match for every agent
+3. Extract scenario prices/probabilities from Dashboard and Excel — must match
+4. Verify current price consistent across Cover tab, Dashboard header, Assumptions
+5. Check fair value / blended value consistent across artifacts
+6. Flag ANY discrepancy with severity level
+```
+
+### Pass 5: Remediation & Sign-Off
+```
+1. If ANY issues found in Passes 1-4:
+   - Fix automatically where possible (missing IFERROR, tab colors, etc.)
+   - Re-run recalc.py after Excel fixes
+   - Flag issues requiring manual review
+2. Generate audit summary with PASS/FAIL per check
+3. Save audit report to ${WORKDIR}/audit-report.md
+4. Only after ALL checks pass → deliver to user
+```
+
+### Audit Agent Prompt Template
+```
+You are the Quality Assurance Auditor for the hedge fund analysis system.
+You have access to ALL generated artifacts:
+- Excel model: ${WORKDIR}/${TICKER}-financial-model.xlsx
+- Dashboard: ${WORKDIR}/deploy/dashboard.html (or index.html)
+- Agent reports: ${WORKDIR}/agents/*.md
+- Orchestrator SKILL.md for expected structure
+
+Your job: systematically verify integrity, consistency, and completeness.
+Run all 5 passes. Fix what you can. Flag what you can't.
+Do NOT deliver until all critical checks pass.
+
+Read skills/qa-auditor/SKILL.md for complete methodology.
+```
 
 ---
 
