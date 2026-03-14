@@ -273,6 +273,135 @@ This agent takes all synthesized findings and produces:
 
 ---
 
+## Phase 5B: Individual Agent Report Files (REQUIRED)
+
+After the HTML dashboard is deployed, generate **16 individual agent markdown reports** in
+`${WORKDIR}/agents/` with the following format:
+
+```
+${WORKDIR}/agents/01-forensic-accountant.md
+${WORKDIR}/agents/02-competitive-moat.md
+${WORKDIR}/agents/03-governance-forensics.md
+...through...
+${WORKDIR}/agents/16-red-team.md
+```
+
+Each agent `.md` file MUST follow this structure:
+```markdown
+# Agent [N]: [Role Name] — [Dimension]
+
+**Score:** [X]/10 | **Confidence:** [HIGH/MEDIUM/LOW] | **Assessment:** [One-line summary]
+
+---
+
+## Key Findings
+
+### Strengths
+- **[Finding 1]:** [Detail with specific data]
+- **[Finding 2]:** [Detail with specific data]
+
+### Concerns
+- **[Concern 1]:** [Detail with specific data]
+- **[Concern 2]:** [Detail with specific data]
+
+### Context
+- [Why certain findings are normal for this type of company]
+
+### Key Metrics
+
+| Metric | Value | Peer Avg | Assessment |
+|--------|-------|----------|------------|
+| ... | ... | ... | ... |
+
+## Net Assessment
+[2-3 sentence summary weighing strengths vs concerns]
+
+## Sources
+- [List all URLs and documents referenced]
+```
+
+The dashboard HTML appendix section MUST link to all 16 agent files with clickable cards.
+
+---
+
+## Phase 5C: Excel Financial Model (REQUIRED)
+
+After agent reports, generate a **hedge fund-grade Excel financial model** using openpyxl.
+
+The model MUST contain these tabs (minimum 14):
+
+| Tab | Contents |
+|-----|----------|
+| Cover | Ticker, price, fair value, analyst info, color legend |
+| Assumptions | All hardcoded inputs in BLUE — growth rates, margins, WACC components |
+| Income Statement | 5-year historical + 5-year projected, all formula-driven from Assumptions |
+| Balance Sheet | Assets, liabilities, equity with formula links |
+| Cash Flow | Operating, investing, financing with FCF calculation |
+| Revenue Build | Segment-level revenue with volume × ASP drivers |
+| DCF Valuation | WACC calculation, FCF projections, terminal value, implied price |
+| SOTP Valuation | Sum-of-the-parts with segment EV, probability weighting, S-Curve stages |
+| Scenario Analysis | 5 scenarios (Tail Bull → Tail Bear) with probability-weighted blended value |
+| Comps | Comparable company analysis with EV/EBITDA, P/E, EV/Revenue multiples |
+| Agent Scores | All 16 agent scores with confidence levels, linking to dashboard |
+| Catalyst Calendar | Dated catalysts with probability and price impact estimates |
+| Position Sizing | Kelly Criterion framework with investor type allocations |
+| Delta Intelligence | **PROPRIETARY** — Alt data signals, edge quantification, cross-agent correlations, information advantage scorecard (see below) |
+
+### Excel Standards (MANDATORY)
+- **Blue text** (0,0,255): All hardcoded inputs
+- **Black text** (0,0,0): All formulas and calculations
+- **Green text** (0,128,0): Cross-sheet references
+- **Yellow highlight** (255,255,0): Key assumptions needing attention
+- **ALL calculations as Excel formulas** — never hardcode computed values
+- **IFERROR wrappers** on all division formulas
+- **Number formatting**: Currency as $#,##0, percentages as 0.0%, multiples as 0.0x
+- **Recalculate with recalc.py** and verify ZERO formula errors before delivery
+
+### Delta Intelligence Tab (CRITICAL DIFFERENTIATOR)
+
+This tab contains insights BEYOND what Bloomberg Terminal, S&P Capital IQ, or sell-side
+research systematically tracks. It MUST include:
+
+1. **Alternative Data Signals Matrix** — 30+ signals across categories:
+   - App analytics (DAU, install rates, feature adoption)
+   - Satellite imagery (factory utilization, inventory, construction)
+   - Web traffic (configurator sessions, inventory page traffic)
+   - Talent flow (job postings, senior hires, Glassdoor sentiment)
+   - IP activity (patent filings by category, velocity trends)
+   - Social intelligence (sentiment, mention velocity, video views)
+   - Supply chain (component shipments, raw material pricing)
+   - Political risk (donations, regulatory filings, policy tracking)
+   - Technical performance (product-specific KPIs not in filings)
+   - Customer intel (trade-in ratios, days-to-sell, insurance metrics)
+
+   Each signal has: Current Value, YoY Change, Signal Direction, Confidence,
+   "Bloomberg Has?" flag, Edge Description, and Source.
+
+2. **Edge Quantification Matrix** — 10+ insights where our analysis differs from street:
+   - Our Finding vs Street Consensus vs Delta
+   - Impact ($B), Probability, Expected Value (formula)
+   - Time Horizon and Thesis Impact classification
+
+3. **Cross-Agent Correlation Insights** — patterns only a multi-agent system can detect:
+   - Which agents' findings correlate or contradict
+   - Correlation coefficient where measurable
+   - Actionable implication
+
+4. **Information Advantage Scorecard** — scoring (1-10) across 16 dimensions:
+   - Bloomberg Terminal vs CapIQ vs Sell-Side vs Our System
+   - Highlighting where we have MAJOR EDGE, STRONG EDGE, or PARITY
+
+5. **Hidden Catalyst Intelligence** — events NOT on sell-side catalyst calendars:
+   - Date estimates, probability, price impact range
+   - "Bloomberg Tracks?" flag highlighting our informational edge
+
+### File Outputs
+Save two copies:
+- **Filled**: `${WORKDIR}/${TICKER}-financial-model.xlsx` (with company data)
+- **Template**: `templates/financial-model-template.xlsx` (reusable blank)
+
+---
+
 ## Quality Standards
 
 The final report must pass these checks:
