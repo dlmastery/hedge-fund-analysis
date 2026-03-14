@@ -99,3 +99,45 @@ Return structured markdown with:
 - **NET COMPETITIVE TRAJECTORY**: Improving / Stable / Declining (with nuance per business line)
 - **Data Confidence**: per sub-dimension
 - **Sources**: all URLs
+
+---
+
+## NEW DIMENSION: Domain-by-Domain Competitive Battlefield
+
+For tech companies, competitive analysis must be DOMAIN-SPECIFIC, not monolithic.
+
+### Required Competitive Battlefield Matrix
+
+For each major competitor, build a domain-by-domain assessment:
+
+| Domain | [Company] | [Comp 1] | [Comp 2] | [Comp 3] | [Comp 4] |
+|--------|----------|---------|---------|---------|---------|
+| [Domain 1] | Score/10 | Score/10 | ... | ... | ... |
+| [Domain 2] | ... | ... | ... | ... | ... |
+
+For Tesla, domains include:
+- Mass-market EVs (vs BYD, Hyundai, VW)
+- Premium EVs (vs BMW, Mercedes, Porsche, Lucid)
+- Autonomous Driving (vs Waymo, Cruise, Mobileye, Baidu)
+- Energy Storage (vs Fluence, BYD Energy, Wartsila)
+- Charging Network (vs ChargePoint, Electrify America, IONITY)
+- AI/Robotics (vs Boston Dynamics, Figure AI, Agility)
+- Insurance (vs Root, Progressive, Lemonade)
+
+For each domain:
+1. Where is [Company] STRONGER than each competitor?
+2. Where is each competitor STRONGER?
+3. What is the disruption probability (new entrant threat)?
+4. What is the competitive trajectory (gaining/losing share)?
+5. Win rate trend against each specific competitor
+
+### Head-to-Head Feature Comparison
+For top 3 competitors, build a detailed feature comparison:
+| Feature/Capability | [Company] | [Competitor] | Advantage |
+|-------------------|----------|-------------|-----------|
+
+### Disruption Risk Assessment
+Identify companies NOT currently competing that could enter:
+- Startups with funding > $500M
+- Adjacent industry players (Apple, Sony, Xiaomi for Tesla)
+- Chinese competitors with cost advantage

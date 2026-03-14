@@ -30,12 +30,15 @@ weighs bull AND bear factors equally. The system should:
 **Phase 3: Red Team (sequential)** → **Phase 4: Synthesis** → **Phase 5: HTML + Agent Reports + Excel Model** →
 **Phase 6: QA Audit (blocks delivery until all checks pass)**
 
-### Agent Roster (17 Total)
+### Agent Roster (20 Total)
 | # | Agent | Phase | Type |
 |---|-------|-------|------|
-| 1-15 | Research Agents | Phase 2 (parallel) | Analysis |
+| 1-15 | Core Research Agents | Phase 2 (parallel) | Analysis |
 | 16 | Red Team | Phase 3 (sequential) | Adversarial |
 | 17 | QA Auditor | Phase 6 (final gate) | Verification |
+| 18 | Developer Ecosystem Intelligence | Phase 2 (parallel) | Tech Alpha |
+| 19 | Early Warning & Leading Indicators | Phase 2 (parallel) | Leading Signals |
+| 20 | Product & Deep-Tech Intelligence | Phase 2 (parallel) | Tech Diligence |
 
 ---
 
@@ -145,6 +148,11 @@ the scoping variables into the prompt template.
 | 13 | Customer Unit Economics | `skills/customer-unit-economics/SKILL.md` | Cohort retention, concentration dynamics, win/loss patterns, LTV/CAC forensics |
 | 14 | Industry & Disruption Landscape | `skills/industry-disruption/SKILL.md` | Industry lifecycle, AI disruption, platform shifts, value chain migration, competitive benchmarking, regulatory trajectory |
 | 15 | CEO / Founder Ecosystem | `skills/ceo-ecosystem/SKILL.md` | Multi-venture synergies, political capital, talent gravity, brand halo/drag, attention allocation, related entity optionality |
+
+*New Tech Intelligence Agents (Phase 2, parallel):*
+| 18 | Developer Ecosystem Intelligence | `skills/developer-ecosystem/SKILL.md` | SDK adoption, GitHub activity, platform lock-in, developer migration, ecosystem health |
+| 19 | Early Warning & Leading Indicators | `skills/early-warning/SKILL.md` | 6-18 month pre-earnings signals: demand, supply chain, talent, regulatory, management behavior |
+| 20 | Product & Deep-Tech Intelligence | `skills/product-deep-tech/SKILL.md` | Technical architecture moat, replication difficulty, product roadmap from patents/hires/GitHub, HW/SW integration |
 
 *Phase 3 (sequential):*
 | 16 | Red Team / Adversarial | `skills/red-team/SKILL.md` | Stress-test bull AND bear cases, kill criteria, position sizing |

@@ -106,3 +106,48 @@ Return structured markdown with:
 - **Key Insight**: what does the narrative pattern tell us about the next 12 months?
 - **Data Confidence**: per sub-dimension
 - **Sources**: all URLs (especially earnings call transcript sources)
+
+---
+
+## NEW DIMENSION: Hype Cycle Positioning
+
+### Gartner-Style Hype Cycle Assessment
+For each major business segment, determine position on the hype cycle:
+
+| Stage | Description | Investment Implication |
+|-------|-------------|----------------------|
+| Technology Trigger | Early innovation, no proven business model | High risk, high reward |
+| Peak of Inflated Expectations | Hype exceeds reality, frothy valuations | Sell the hype |
+| Trough of Disillusionment | Failed expectations, sentiment bottom | Contrarian opportunity |
+| Slope of Enlightenment | Proven use cases emerging, rational adoption | Best risk/reward entry |
+| Plateau of Productivity | Mainstream, stable, priced efficiently | Hold for income |
+
+Map each segment:
+| Business Segment | Hype Cycle Stage | Market Perception | Our Assessment | Mispricing? |
+|-----------------|-----------------|-------------------|---------------|-------------|
+
+### Structured Consensus Gap Analysis
+
+Build an explicit table:
+
+| Topic | What Consensus Believes | What Reality Shows | Direction of Error | Magnitude |
+|-------|------------------------|-------------------|-------------------|-----------|
+
+### "What Wall Street Will Realize Too Late" Predictions
+
+For each, provide:
+1. The insight (what will change)
+2. Timeline (when it becomes obvious)
+3. Catalyst (what event reveals it)
+4. Price impact estimate
+5. Our confidence level
+
+### Narrative Momentum vs Fundamental Momentum Divergence
+
+Track:
+- Is the NARRATIVE improving faster or slower than FUNDAMENTALS?
+- Narrative momentum: media sentiment, analyst upgrades/downgrades, social mention velocity
+- Fundamental momentum: revenue growth, margin trends, cash flow generation
+- When narrative leads fundamentals → momentum trade
+- When fundamentals lead narrative → value opportunity
+- When both declining → avoid

@@ -102,3 +102,61 @@ Return structured markdown with:
 - **NET ALT DATA DIRECTION**: overall assessment weighing all signals
 - **Data Confidence**: per sub-dimension
 - **Sources**: all URLs
+
+---
+
+## NEW DIMENSION: Product Roadmap Prediction Signals
+
+Beyond tracking current alternative data, systematically predict FUTURE products:
+
+### GitHub Activity Mining
+- Track official company repos (commit velocity, new repos created)
+- Monitor employee open-source contributions (what frameworks they're using)
+- New repository creation = new product initiative signal
+- Dependency changes = technology stack evolution
+
+### SDK & API Changelog Analysis
+- Track developer documentation updates (new endpoints = new capabilities)
+- API deprecation notices (sunsetting old products)
+- SDK version jumps (major version = significant product change)
+- New developer program announcements
+
+### Conference Talk Mining
+- What topics are company engineers presenting on?
+- Which conferences are they attending? (new conference = new market)
+- Technical paper publications (arXiv, peer-reviewed)
+- Patent-to-product timeline analysis
+
+### Supply Chain Component Intelligence
+- New component sourcing patterns
+- Supplier CapEx that correlates with customer product cycles
+- FCC/UL/CE certification filings (= product near launch)
+- Tooling and mold orders (= manufacturing preparation)
+
+## NEW DIMENSION: Systematic Talent Flow Analysis
+
+### LinkedIn Talent Flow Tracking
+- WHERE are new hires coming FROM? (which companies)
+- WHERE are departing employees GOING? (competitor threat)
+- Net talent flow direction with specific competitors
+- Seniority mix of hires (senior = near-term product; junior = R&D)
+
+### Team Expansion Rate by Function
+| Division | Headcount (Est.) | 6mo Change | Signal |
+|----------|-----------------|-----------|---------|
+| AI/ML | | | |
+| Manufacturing | | | |
+| Energy | | | |
+| Robotics | | | |
+| Sales/Marketing | | | |
+
+### Compensation Signals
+- Glassdoor salary trend by role
+- Stock-based comp packages (from offer letters shared online)
+- Signing bonus trends (higher = competitive talent market)
+
+### Attrition Red Flags
+- LinkedIn "open to work" signals from current employees
+- Glassdoor review sentiment trajectory
+- Employee tenure distribution shift
+- Key person departure frequency

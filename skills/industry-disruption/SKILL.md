@@ -231,3 +231,47 @@ Return structured markdown with:
 - **Variant View**: what does consensus miss about this industry's evolution?
 - **Data Confidence**: per sub-dimension
 - **Sources**: all URLs
+
+---
+
+## NEW DIMENSION: Deep-Tech Architecture Analysis
+
+### Core Technical Moat Depth Scoring
+For the company's core technology, assess replication difficulty:
+
+| Technology | Replication Difficulty (1-10) | Time to Replicate | Capital Required | Key Barrier |
+|-----------|----------------------------|-------------------|-----------------|-------------|
+
+### Proprietary Dataset Advantage Quantification
+| Dataset | Size | Growth Rate | Uniqueness (1-10) | Competitor Access | Value ($B est.) |
+|---------|------|-----------|-------------------|------------------|----------------|
+
+### Hardware/Software Co-Design Defensibility
+Assess vertical integration advantage:
+- Which layers of the stack does the company control?
+- Where does integration create performance/cost advantage?
+- Is the industry trend toward more or less vertical integration?
+- Map: proprietary silicon → custom firmware → application software → cloud → user experience
+
+### Software Stack Lock-In Mechanisms
+Identify CUDA-like ecosystem lock-in for the company:
+- Developer tools that create switching costs
+- Proprietary APIs that customers build on
+- Data formats that lock in user data
+- Training/certification ecosystems
+- Integration depth with customer workflows
+
+### Engineering Velocity as Competitive Signal
+| Metric | Company | Industry Average | Assessment |
+|--------|---------|-----------------|------------|
+| Patents filed (TTM) | | | |
+| Patents per $1B R&D | | | |
+| Research papers published | | | |
+| Open source contributions | | | |
+| Product release cadence | | | |
+| Bug fix velocity | | | |
+
+### Technology Convergence Map
+Where are multiple technologies converging to create new capabilities?
+Example for Tesla: AI + Robotics + Energy + Manufacturing → Optimus
+Example for Nvidia: Training + Inference + Networking + Software → AI Factory
