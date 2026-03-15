@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedge Fund Analysis System — Report Index</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0a0f; color: #e0e0e0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 60px; }
+        h1 { font-size: 2.2em; color: #ffffff; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .subtitle { color: #909090; font-size: 1em; margin-bottom: 20px; }
+        .badge { display: inline-block; background: #00d4aa; color: #0a0a0f; padding: 6px 14px; border-radius: 5px; font-weight: bold; font-size: 0.8em; letter-spacing: 0.5px; }
+        .reports-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 24px; margin-bottom: 40px; }
+        .report-card { background: #12121a; border: 1px solid #252535; border-radius: 12px; overflow: hidden; transition: all 0.3s ease; }
+        .report-card:hover { border-color: #00d4aa; transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,212,170,0.12); }
+        .card-header { padding: 24px 28px 16px; }
+        .ticker { font-size: 2.4em; font-weight: bold; color: #ffffff; display: inline-block; margin-right: 12px; }
+        .company-name { color: #a0a0a0; font-size: 1.05em; }
+        .card-meta { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+        .meta-pill { background: #1a1a25; border: 1px solid #252535; border-radius: 20px; padding: 4px 12px; font-size: 0.8em; color: #b0b0b0; }
+        .meta-pill.green { border-color: #4ade80; color: #4ade80; }
+        .meta-pill.yellow { border-color: #fbbf24; color: #fbbf24; }
+        .meta-pill.blue { border-color: #60a5fa; color: #60a5fa; }
+        .card-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #252535; margin-top: 0; }
+        .stat { background: #12121a; padding: 14px 16px; text-align: center; }
+        .stat-label { font-size: 0.7em; color: #707070; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+        .stat-value { font-size: 1.2em; font-weight: bold; color: #ffffff; }
+        .stat-value.green { color: #4ade80; }
+        .stat-value.yellow { color: #fbbf24; }
+        .stat-value.red { color: #ff6b6b; }
+        .stat-value.cyan { color: #00d4aa; }
+        .card-links { padding: 20px 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+        .link-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; font-weight: 600; transition: all 0.2s ease; }
+        .link-btn.primary { background: #00d4aa; color: #0a0a0f; }
+        .link-btn.primary:hover { background: #00e8bb; }
+        .link-btn.secondary { background: #1a1a25; color: #e0e0e0; border: 1px solid #252535; }
+        .link-btn.secondary:hover { border-color: #00d4aa; color: #00d4aa; }
+        .thesis-line { padding: 0 28px 20px; color: #909090; font-size: 0.88em; line-height: 1.6; }
+        footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #252535; }
+        footer p { color: #505050; font-size: 0.85em; margin-bottom: 8px; }
+        footer .warn { color: #ff6b6b; font-weight: bold; font-size: 0.9em; }
+        @media (max-width: 540px) {
+            .reports-grid { grid-template-columns: 1fr; }
+            .card-stats { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hedge Fund Analysis System</h1>
+            <p class="subtitle">20-Agent Multi-Dimensional Equity Research</p>
+            <span class="badge">v3.0 — 110+ DIMENSIONS PER REPORT</span>
+        </header>
+
+        <div class="reports-grid">
+            <!-- NFLX Card -->
+            <div class="report-card">
+                <div class="card-header">
+                    <span class="ticker">NFLX</span>
+                    <span class="company-name">Netflix, Inc.</span>
+                    <div class="card-meta">
+                        <span class="meta-pill">March 15, 2026</span>
+                        <span class="meta-pill yellow">NEUTRAL — HOLD</span>
+                        <span class="meta-pill blue">20 Agents</span>
+                    </div>
+                </div>
+                <p class="thesis-line">Fairly valued at $94.96 with optionality from ad tier ($40.5B value), live sports, and ARPU expansion. Fortress balance sheet (A/A3). Key risk: $287M insider selling, engagement declining 3-5% YoY.</p>
+                <div class="card-stats">
+                    <div class="stat"><div class="stat-label">Price</div><div class="stat-value">$94.96</div></div>
+                    <div class="stat"><div class="stat-label">Fair Value</div><div class="stat-value cyan">$109</div></div>
+                    <div class="stat"><div class="stat-label">Conviction</div><div class="stat-value yellow">7.1/10</div></div>
+                    <div class="stat"><div class="stat-label">Upside</div><div class="stat-value green">+15%</div></div>
+                </div>
+                <div class="card-links">
+                    <a href="NFLX-2026-03-15/dashboard-v3.0.html" class="link-btn primary">📊 Dashboard</a>
+                    <a href="NFLX-2026-03-15/NFLX-financial-model.xlsx" class="link-btn secondary">📈 Excel Model</a>
+                    <a href="NFLX-2026-03-15/agents/" class="link-btn secondary">📁 Agent Reports</a>
+                </div>
+            </div>
+
+            <!-- TSLA Card -->
+            <div class="report-card">
+                <div class="card-header">
+                    <span class="ticker">TSLA</span>
+                    <span class="company-name">Tesla, Inc.</span>
+                    <div class="card-meta">
+                        <span class="meta-pill">March 10, 2026</span>
+                        <span class="meta-pill green">CAUTIOUS LONG</span>
+                        <span class="meta-pill blue">20 Agents</span>
+                    </div>
+                </div>
+                <p class="thesis-line">Fairly valued at $401 on base case ($420-450) with significant asymmetric upside from FSD software, energy storage (81% YoY growth), and robotaxi economics. Blended fair value $455. Smart money positioned for $550-650.</p>
+                <div class="card-stats">
+                    <div class="stat"><div class="stat-label">Price</div><div class="stat-value">$401</div></div>
+                    <div class="stat"><div class="stat-label">Fair Value</div><div class="stat-value cyan">$455</div></div>
+                    <div class="stat"><div class="stat-label">Conviction</div><div class="stat-value yellow">6.8/10</div></div>
+                    <div class="stat"><div class="stat-label">Upside</div><div class="stat-value green">+13.5%</div></div>
+                </div>
+                <div class="card-links">
+                    <a href="TSLA-2026-03-10/dashboard-v3.0.html" class="link-btn primary">📊 Dashboard</a>
+                    <a href="TSLA-2026-03-10/TSLA-financial-model.xlsx" class="link-btn secondary">📈 Excel Model</a>
+                    <a href="TSLA-2026-03-10/agents/" class="link-btn secondary">📁 Agent Reports</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p class="warn">INTERNAL USE ONLY — NOT INVESTMENT ADVICE</p>
+            <p>Hedge Fund Analysis System v3.0 | 20-Agent Architecture | 110+ Dimensions | Consensus-Calibrated</p>
+            <p style="margin-top: 12px; color: #404040;">© 2026 Institutional Analysis Framework</p>
+        </footer>
+    </div>
+</body>
+</html>
