@@ -1416,86 +1416,452 @@
             </div>
         </div>
 
-        <!-- SECTION 9-12: POSITION SIZING & METHODOLOGY -->
+        <!-- SECTION 9: POSITION SIZING & ENTRY STRATEGY -->
         <div class="section">
             <div class="section-header" onclick="toggleSection(this)">
-                <span class="section-number">§9-12</span>
-                <h2>Position Sizing, Confidence & Methodology</h2>
+                <span class="section-number">§9</span>
+                <h2>Position Sizing & Entry Strategy</h2>
                 <span class="toggle-arrow">▶</span>
             </div>
             <div class="section-content">
-                <h3 style="color: #00d4aa; margin: 20px 0 15px 0; font-size: 1.1em;">Position Sizing Framework</h3>
-                <p style="color: #e0e0e0; line-height: 1.8;">Kelly Criterion analysis suggests position sizing at current price ($94.96) is <strong>negative</strong> — expected return of +15% insufficient to justify 22% downside variance. Expected return = (38% × +45%) + (35% × +15%) + (30% × -28%) = +15.4%, with median downside -28% (bear) vs upside +45% (bull). Risk/reward asymmetric in bear's favor.</p>
+                <p style="color: #a0a0a0; margin-bottom: 25px;">Investor-specific positioning strategies calibrated to risk tolerance, time horizon, and conviction level.</p>
 
-                <div class="risk-opportunity-section">
-                    <div style="background: rgba(0, 212, 170, 0.08); border: 1px solid #00d4aa; border-radius: 8px; padding: 20px;">
-                        <h4 style="color: #00d4aa; margin-bottom: 12px;">Recommended Allocation Strategy</h4>
-                        <div style="color: #e0e0e0; font-size: 0.9em; line-height: 1.7;">
-                            <p><strong>< $80 (18% discount to FV):</strong> 3-5% portfolio weight. Buy aggressively.</p>
-                            <p><strong>$80-$110:</strong> 1-2% portfolio weight. Maintain core position, add on dips.</p>
-                            <p><strong>$110-$120:</strong> Trim 25-50% on strength; reduce to 0.5-1%.</p>
-                            <p><strong>> $120:</strong> Sell out completely. Risk/reward deteriorates.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 15px; margin-bottom: 30px;">
+                    <div style="background: #12121a; border: 2px solid #4ade80; border-left: 5px solid #4ade80; border-radius: 8px; padding: 20px;">
+                        <div style="color: #4ade80; font-weight: bold; margin-bottom: 12px; font-size: 0.95em;">GROWTH INVESTOR</div>
+                        <p style="color: #d0d0d0; font-size: 0.95em; margin-bottom: 12px;"><strong>Stance:</strong> MODERATE OVERWEIGHT (2-3%)</p>
+                        <ul style="color: #d0d0d0; font-size: 0.9em; margin: 0; padding-left: 20px;">
+                            <li style="margin: 6px 0;">Entry: 50% now at $94.96</li>
+                            <li style="margin: 6px 0;">25% on dips to $85</li>
+                            <li style="margin: 6px 0;">25% at $80 or below</li>
+                            <li style="margin: 6px 0;">Take profit: 25% at $115-120</li>
+                            <li style="margin: 6px 0;">25% at $130+, hold 50% for ad tier optionality</li>
+                        </ul>
+                        <p style="color: #a8a8a8; font-size: 0.85em; margin-top: 12px; border-top: 1px solid #252535; padding-top: 12px;"><strong>Horizon:</strong> 3-5 year (ad tier + sports maturity)</p>
+                    </div>
+
+                    <div style="background: #12121a; border: 2px solid #fbbf24; border-left: 5px solid #fbbf24; border-radius: 8px; padding: 20px;">
+                        <div style="color: #fbbf24; font-weight: bold; margin-bottom: 12px; font-size: 0.95em;">VALUE INVESTOR</div>
+                        <p style="color: #d0d0d0; font-size: 0.95em; margin-bottom: 12px;"><strong>Stance:</strong> PASS — No Margin of Safety</p>
+                        <ul style="color: #d0d0d0; font-size: 0.9em; margin: 0; padding-left: 20px;">
+                            <li style="margin: 6px 0;">Wait for $75-80 entry (18-25% discount to FV)</li>
+                            <li style="margin: 6px 0;">At $80, risk/reward improves to 1.5:1</li>
+                            <li style="margin: 6px 0;">Current P/E 53x too rich for value discipline</li>
+                            <li style="margin: 6px 0;">FCF yield 2.8% insufficient vs risk-free 4.3%</li>
+                        </ul>
+                        <p style="color: #a8a8a8; font-size: 0.85em; margin-top: 12px; border-top: 1px solid #252535; padding-top: 12px;"><strong>Key:</strong> Price anchors matter — no margin of safety at $94.96</p>
+                    </div>
+
+                    <div style="background: #12121a; border: 2px solid #60a5fa; border-left: 5px solid #60a5fa; border-radius: 8px; padding: 20px;">
+                        <div style="color: #60a5fa; font-weight: bold; margin-bottom: 12px; font-size: 0.95em;">HEDGE FUND</div>
+                        <p style="color: #d0d0d0; font-size: 0.95em; margin-bottom: 12px;"><strong>Stance:</strong> PAIR TRADE — Long NFLX / Short DIS</p>
+                        <ul style="color: #d0d0d0; font-size: 0.9em; margin: 0; padding-left: 20px;">
+                            <li style="margin: 6px 0;">1-2% portfolio weight (net long)</li>
+                            <li style="margin: 6px 0;">Long NFLX / Short DIS (live sports advantage)</li>
+                            <li style="margin: 6px 0;">Protection: $80 put hedge (3% of position cost)</li>
+                            <li style="margin: 6px 0;">Calendar spread: sell near-term vol, buy 12mo upside</li>
+                        </ul>
+                        <p style="color: #a8a8a8; font-size: 0.85em; margin-top: 12px; border-top: 1px solid #252535; padding-top: 12px;"><strong>Horizon:</strong> 12-18 months</p>
+                    </div>
+
+                    <div style="background: #12121a; border: 2px solid #00d4aa; border-left: 5px solid #00d4aa; border-radius: 8px; padding: 20px;">
+                        <div style="color: #00d4aa; font-weight: bold; margin-bottom: 12px; font-size: 0.95em;">OPTIONS STRATEGY</div>
+                        <p style="color: #d0d0d0; font-size: 0.95em; margin-bottom: 12px;"><strong>Stance:</strong> DEFINED-RISK BULL SPREAD</p>
+                        <ul style="color: #d0d0d0; font-size: 0.9em; margin: 0; padding-left: 20px;">
+                            <li style="margin: 6px 0;">Buy $85-90 calls (18-month expiry)</li>
+                            <li style="margin: 6px 0;">Sell $130 calls to fund premium</li>
+                            <li style="margin: 6px 0;">Max risk: premium paid (~$8-10/contract)</li>
+                            <li style="margin: 6px 0;">Max reward: $40-45/contract at $130</li>
+                        </ul>
+                        <p style="color: #a8a8a8; font-size: 0.85em; margin-top: 12px; border-top: 1px solid #252535; padding-top: 12px;"><strong>Profile:</strong> Defined-risk for ad tier + sports catalysts</p>
+                    </div>
+                </div>
+
+                <div style="background: #1a1a25; border: 2px solid #00d4aa; border-radius: 8px; padding: 20px; margin-bottom: 25px;">
+                    <div style="color: #00d4aa; font-weight: bold; margin-bottom: 12px; font-size: 1em;">Kelly Criterion Analysis</div>
+                    <p style="color: #d0d0d0; line-height: 1.6; margin-bottom: 12px;">Optimal portfolio allocation at current price ($94.96) based on risk/reward and win probability:</p>
+                    <ul style="color: #d0d0d0; font-size: 0.95em; margin: 0; padding-left: 20px;">
+                        <li style="margin: 8px 0;"><strong>Kelly Result:</strong> NEGATIVE — expected return of +15% insufficient to justify 22% downside variance</li>
+                        <li style="margin: 8px 0;"><strong>Expected Return Decomposition:</strong> (38% × +45%) + (35% × +15%) + (30% × -28%) = +15.4% blended</li>
+                        <li style="margin: 8px 0;"><strong>Median Downside:</strong> -28% (bear) vs Upside: +45% (bull). Risk/reward asymmetric in bear's favor at current price.</li>
+                        <li style="margin: 8px 0;"><strong>Interpretation:</strong> Wait for $80-85 entry where Kelly turns positive. At $80, Kelly suggests 8-12% allocation.</li>
+                    </ul>
+                </div>
+
+                <div style="background: #12121a; border: 1px solid #252535; border-radius: 8px; padding: 20px;">
+                    <h4 style="color: #ffffff; margin-bottom: 15px;">Entry / Exit Decision Matrix</h4>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Price Zone</th><th>Action</th><th>Portfolio Weight</th><th>Rationale</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color: #4ade80; font-weight: 600;">< $80</td>
+                                <td>Buy Aggressively</td>
+                                <td>3-5%</td>
+                                <td>18%+ discount to FV; Kelly positive; margin of safety achieved</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fbbf24; font-weight: 600;">$80-$95</td>
+                                <td>Accumulate</td>
+                                <td>1-2%</td>
+                                <td>Fair value zone; add on weakness; maintain core position</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fbbf24; font-weight: 600;">$95-$110</td>
+                                <td>Hold</td>
+                                <td>1-2%</td>
+                                <td>Slightly above FV; hold for catalyst optionality</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #ff6b6b; font-weight: 600;">$110-$120</td>
+                                <td>Trim 25-50%</td>
+                                <td>0.5-1%</td>
+                                <td>10-13% above FV; reduce exposure on strength</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #ff6b6b; font-weight: 600;">> $120</td>
+                                <td>Exit Completely</td>
+                                <td>0%</td>
+                                <td>26%+ above FV; risk/reward severely deteriorated</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 10: DATA CONFIDENCE MATRIX -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <span class="section-number">§10</span>
+                <h2>Data Confidence Matrix</h2>
+                <span class="toggle-arrow">▶</span>
+            </div>
+            <div class="section-content">
+                <p style="color: #a0a0a0; margin-bottom: 25px;">Agent scoring includes both conviction (0-10) AND data quality confidence (HIGH/MEDIUM/LOW). High scores with LOW confidence indicate speculative positioning.</p>
+
+                <div style="overflow-x: auto; margin-bottom: 25px;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Agent</th>
+                                <th>Score</th>
+                                <th>Confidence</th>
+                                <th>Key Strength</th>
+                                <th>Key Gap</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Forensic Accountant</td>
+                                <td style="color: #fbbf24; font-weight: bold;">6.8</td>
+                                <td><span style="background: #22c55e; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">HIGH</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">SEC filing data clean</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Off-balance-sheet obligations</td>
+                            </tr>
+                            <tr>
+                                <td>Competitive Moat</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.5</td>
+                                <td><span style="background: #22c55e; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">HIGH</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Global content scale data</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Switching cost quantification</td>
+                            </tr>
+                            <tr>
+                                <td>Governance</td>
+                                <td style="color: #fbbf24; font-weight: bold;">7.0</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Proxy/insider filing data</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Co-CEO succession clarity</td>
+                            </tr>
+                            <tr>
+                                <td>Quant Positioning</td>
+                                <td style="color: #fbbf24; font-weight: bold;">6.0</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Options flow real-time</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">13F lagged 45 days</td>
+                            </tr>
+                            <tr>
+                                <td>Alt Data</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.5</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">App analytics / Sensor Tower</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Engagement metrics noisy</td>
+                            </tr>
+                            <tr>
+                                <td>Macro Scenarios</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.2</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Consensus-calibrated probabilities</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Tariff tail probability subjective</td>
+                            </tr>
+                            <tr>
+                                <td>Future Optionality</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.5</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">SOTP framework rigorous</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Ad tier TAM speculative</td>
+                            </tr>
+                            <tr>
+                                <td>Narrative Decoder</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.2</td>
+                                <td><span style="background: #22c55e; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">HIGH</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Promise tracking ledger</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Tone analysis subjective</td>
+                            </tr>
+                            <tr>
+                                <td>Capital Structure</td>
+                                <td style="color: #4ade80; font-weight: bold;">8.7</td>
+                                <td><span style="background: #22c55e; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">HIGH</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Balance sheet data pristine</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Content obligation trajectory</td>
+                            </tr>
+                            <tr>
+                                <td>Corporate Structure</td>
+                                <td style="color: #fbbf24; font-weight: bold;">6.8</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Entity structure from filings</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Transfer pricing risk opaque</td>
+                            </tr>
+                            <tr>
+                                <td>Scuttlebutt</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.2</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Advertiser sentiment data</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">No expert network calls</td>
+                            </tr>
+                            <tr>
+                                <td>Balance Sheet Quality</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.5</td>
+                                <td><span style="background: #22c55e; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">HIGH</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">SEC filing data clean</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Amortization acceleration risk</td>
+                            </tr>
+                            <tr>
+                                <td>Customer Economics</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.5</td>
+                                <td><span style="background: #22c55e; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">HIGH</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">LTV/CAC framework solid</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">ARPU compression trajectory</td>
+                            </tr>
+                            <tr>
+                                <td>Industry Disruption</td>
+                                <td style="color: #fbbf24; font-weight: bold;">6.2</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Industry data from IEA/analysts</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">AI disruption timeline uncertain</td>
+                            </tr>
+                            <tr>
+                                <td>CEO/Founder Ecosystem</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.5</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Leadership track record analysis</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Succession planning opaque</td>
+                            </tr>
+                            <tr>
+                                <td>Red Team</td>
+                                <td style="color: #fbbf24; font-weight: bold;">6.5</td>
+                                <td><span style="background: #22c55e; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">HIGH</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Both-sides stress test</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Historical base rates limited</td>
+                            </tr>
+                            <tr>
+                                <td>Developer Ecosystem</td>
+                                <td style="color: #fbbf24; font-weight: bold;">6.8</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">OSS reputation + infra data</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Platform strategy opaque</td>
+                            </tr>
+                            <tr>
+                                <td>Early Warning</td>
+                                <td style="color: #fbbf24; font-weight: bold;">6.2</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Insider selling data definitive</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Engagement trend noisy</td>
+                            </tr>
+                            <tr>
+                                <td>Product Deep-Tech</td>
+                                <td style="color: #4ade80; font-weight: bold;">7.2</td>
+                                <td><span style="background: #fbbf24; color: #000; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">MEDIUM</span></td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">CDN/encoding data strong</td>
+                                <td style="color: #b0b0b0; font-size: 0.9em;">Ad tech + gaming maturity unclear</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="background: #1a1a25; border: 2px solid #00d4aa; border-radius: 8px; padding: 20px;">
+                    <p style="color: #d0d0d0; line-height: 1.6;"><strong>Interpretation:</strong> Agents with HIGH confidence + high conviction (Capital Structure 8.7, Customer Economics 7.5, Balance Sheet 7.5) represent well-sourced, data-backed positioning. Agents with MEDIUM confidence but high conviction (Future Optionality 7.5, Alt Data 7.5) represent areas where thesis depends on forward-looking assumptions (ad tier TAM, sports revenue). The consensus 7.1/10 conviction is primarily driven by HIGH-confidence agents, making the base case institutionally defensible.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 11: AGENT DEEP-DIVE REPORTS -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <span class="section-number">§11</span>
+                <h2>Agent Deep-Dive Reports</h2>
+                <span class="toggle-arrow">▶</span>
+            </div>
+            <div class="section-content">
+                <p style="color: #a0a0a0; margin-bottom: 25px;">Detailed findings from key agents with structured analysis of strengths, concerns, and implications for valuation.</p>
+
+                <div style="margin-bottom: 30px;">
+                    <div style="background: #12121a; border-left: 5px solid #4ade80; border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
+                        <div style="background: #4ade80; color: #000; padding: 12px 15px; font-weight: bold; font-size: 0.95em;">Capital Structure: 8.7/10 — Fortress Balance Sheet (A/A3 Investment Grade)</div>
+                        <div style="padding: 20px;">
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">STRENGTH:</span> $8.4B cash, $14.5B undrawn revolver, 1.1x net debt/EBITDA — investment-grade fortress enabling strategic flexibility</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">STRENGTH:</span> No debt maturities until 2028; weighted average cost of debt 4.4% — no refinancing risk in rising rate environment</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #ff6b6b; font-weight: bold;">CONCERN:</span> $22.7B off-balance-sheet content obligations significantly understate true leverage (3.8x adjusted vs 1.1x reported)</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #fbbf24; font-weight: bold;">CONTEXT:</span> Content obligations are industry-standard for streaming (Disney, Amazon similar). Off-balance-sheet treatment is GAAP-compliant, not deceptive.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #00d4aa; font-weight: bold;">NET:</span> Best-in-class capital structure among streaming peers. Fortress balance sheet is a competitive weapon for content bidding wars.</div>
+                            <p style="color: #909090; font-size: 0.85em; margin-top: 12px; padding-top: 12px; border-top: 1px solid #252535;"><strong>Source:</strong> SEC 10-K, Moody's/S&P ratings, FMP API</p>
                         </div>
                     </div>
-                    <div style="background: rgba(255, 200, 0, 0.08); border: 1px solid #ffc800; border-radius: 8px; padding: 20px;">
-                        <h4 style="color: #ffc800; margin-bottom: 12px;">Investor Profile Sizing</h4>
-                        <div style="color: #e0e0e0; font-size: 0.9em; line-height: 1.7;">
-                            <p><strong>Growth Investor:</strong> 2-3% (high conviction on ad tier + sports)</p>
-                            <p><strong>Value Investor:</strong> Pass (no margin of safety at $94.96)</p>
-                            <p><strong>Hedge Fund:</strong> Pair trade: long NFLX / short DIS (live sports competitive advantage)</p>
-                            <p><strong>Options Trader:</strong> Buy $85-90 calls (18mo), sell $130 calls (hedge)</p>
+
+                    <div style="background: #12121a; border-left: 5px solid #fbbf24; border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
+                        <div style="background: #fbbf24; color: #000; padding: 12px 15px; font-weight: bold; font-size: 0.95em;">Competitive Moat: 7.5/10 — Unmatched Scale, Low Switching Costs</div>
+                        <div style="padding: 20px;">
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">STRENGTH:</span> 302M subscribers globally, $17B content budget — unmatched scale advantage in original content production</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">STRENGTH:</span> Open Connect CDN serving 15%+ of global internet traffic — structural cost advantage impossible to replicate</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #ff6b6b; font-weight: bold;">ERODING:</span> Switching costs near zero (cancel anytime). Content licensing moat eroding as studios pull content. Market share declining 63% → 59%.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #00d4aa; font-weight: bold;">NET:</span> Scale moat defensible for 3-5 years. Ad tier creates NEW moat (first-party data + 70M ad-supported users). Sports rights add switching costs.</div>
+                            <p style="color: #909090; font-size: 0.85em; margin-top: 12px; padding-top: 12px; border-top: 1px solid #252535;"><strong>Source:</strong> Company filings, Sensor Tower, industry data</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #12121a; border-left: 5px solid #fbbf24; border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
+                        <div style="background: #fbbf24; color: #000; padding: 12px 15px; font-weight: bold; font-size: 0.95em;">Alt Data Signals: 7.5/10 — Content Momentum Solid, Engagement Declining</div>
+                        <div style="padding: 20px;">
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">BULLISH:</span> App downloads +12% YoY; content library engagement strong on new releases (Wednesday S2, Squid Game S2 performing)</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #ff6b6b; font-weight: bold;">BEARISH:</span> Average session duration declining 3-5% YoY in mature markets. Search interest plateauing. Short-form video stealing attention.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #fbbf24; font-weight: bold;">MIXED:</span> Ad tier adoption exceeding expectations (70M MAU), but CPM compression risk as inventory scales faster than demand.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #00d4aa; font-weight: bold;">NET:</span> Content flywheel intact but engagement headwinds signal maturity. Ad tier is the new growth vector compensating for subscriber saturation.</div>
+                            <p style="color: #909090; font-size: 0.85em; margin-top: 12px; padding-top: 12px; border-top: 1px solid #252535;"><strong>Source:</strong> Sensor Tower, Google Trends, SimilarWeb, third-party ad verification</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #12121a; border-left: 5px solid #fbbf24; border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
+                        <div style="background: #fbbf24; color: #000; padding: 12px 15px; font-weight: bold; font-size: 0.95em;">Narrative Decoder: 7.2/10 — Systematic Sandbagging Strategy Confirmed</div>
+                        <div style="padding: 20px;">
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;">Management promise delivery rate: 78%. Under-promise/over-deliver pattern confirmed across 8 of last 12 quarters.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">DELIVERED:</span> Password crackdown (8M+ net adds), ad tier launch (ahead of schedule), content cost optimization, operating margin expansion to 28%+</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #fbbf24; font-weight: bold;">IN PROGRESS:</span> Live sports monetization (NFL, WWE — early innings), gaming platform (slow but persistent investment)</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #ff6b6b; font-weight: bold;">CONCERN:</span> Recent pivot away from reporting subscriber numbers → signals defensive narrative shift. Metric obfuscation historically precedes growth deceleration.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #00d4aa; font-weight: bold;">NET:</span> Credibility score 7.2/10 — above average. Sandbagging pattern is shareholder-friendly. Metric suppression is the one yellow flag.</div>
+                            <p style="color: #909090; font-size: 0.85em; margin-top: 12px; padding-top: 12px; border-top: 1px solid #252535;"><strong>Source:</strong> Earnings transcripts (8 quarters), press releases, SEC 8-K filings</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #12121a; border-left: 5px solid #fbbf24; border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
+                        <div style="background: #fbbf24; color: #000; padding: 12px 15px; font-weight: bold; font-size: 0.95em;">Customer Economics: 7.5/10 — Exceptional LTV/CAC But ARPU Compression Looming</div>
+                        <div style="padding: 20px;">
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">STRENGTH:</span> LTV/CAC ratio 8.2x (exceptional). Monthly churn 2.1% (industry-leading). $176 average LTV per subscriber.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #ff6b6b; font-weight: bold;">CONCERN:</span> ARPU declining in mature markets as ad tier mix shifts lower. Blended ARPU compression 2-4% expected through 2027.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #00d4aa; font-weight: bold;">NET:</span> Exceptional unit economics today; future trajectory depends on ad tier ARPU compensating for subscription ARPU compression.</div>
+                            <p style="color: #909090; font-size: 0.85em; margin-top: 12px; padding-top: 12px; border-top: 1px solid #252535;"><strong>Source:</strong> Company filings, third-party estimates, cohort analysis</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #12121a; border-left: 5px solid #fbbf24; border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
+                        <div style="background: #fbbf24; color: #000; padding: 12px 15px; font-weight: bold; font-size: 0.95em;">Future Optionality: 7.5/10 — 23% Embedded Discount to SOTP Value</div>
+                        <div style="padding: 20px;">
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">Ad Tier:</span> $40.5B standalone value (34% of total). 70M MAU scaling to 150M+ by 2028. CPM $28-35 with upside to $40+.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">Live Sports:</span> NFL, WWE, boxing — creating appointment viewing and reducing churn. Revenue contribution growing but margin-dilutive near-term.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">Gaming:</span> 60M MAU target by 2027. Low margin but high engagement/retention value. Comparable: Apple Arcade strategy.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #00d4aa; font-weight: bold;">SOTP:</span> Core streaming $72B + Ad tier $40.5B + Sports $8B + Gaming $2B = $122.5B SOTP vs $95B market cap. 23% discount to parts.</div>
+                            <p style="color: #909090; font-size: 0.85em; margin-top: 12px; padding-top: 12px; border-top: 1px solid #252535;"><strong>Source:</strong> Company filings, SOTP model, analyst reports, real options framework</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #12121a; border-left: 5px solid #60a5fa; border-radius: 8px; overflow: hidden;">
+                        <div style="background: #60a5fa; color: #000; padding: 12px 15px; font-weight: bold; font-size: 0.95em;">Red Team: Net Assessment — NEUTRAL with Slight Bearish Tilt (6.5/10)</div>
+                        <div style="padding: 20px;">
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #fbbf24; font-weight: bold;">Consensus calibration:</span> Our $109 FV is 15% above $94.96 current price and within analyst consensus range $100-130. Deviation is reasonable.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #4ade80; font-weight: bold;">Bull stress test:</span> $138 requires ad tier CPM $40+ AND sports revenue exceeding $5B. Plausible but requires flawless execution.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #ff6b6b; font-weight: bold;">Bear stress test:</span> $55 requires ad CPM collapse to $15 + tariff war + subscriber churn acceleration. Low probability (5%).</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #ff6b6b; font-weight: bold;">Key concern:</span> $287M insider selling with ZERO buying is the strongest single bearish signal. Insiders not backing the narrative.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #fbbf24; font-weight: bold;">Kelly check:</span> Negative at current price. Market is pricing NFLX near fair value — limited edge for new positions.</div>
+                            <div style="background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 4px; margin: 8px 0; color: #d0d0d0; font-size: 0.95em;"><span style="color: #00d4aa; font-weight: bold;">FINAL:</span> Fairly valued with optionality. HOLD existing positions; do NOT initiate new. Wait for $80-85 for attractive entry.</div>
+                            <p style="color: #909090; font-size: 0.85em; margin-top: 12px; padding-top: 12px; border-top: 1px solid #252535;"><strong>Source:</strong> Synthesis of all 19 agent findings + consensus calibration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 12: METHODOLOGY & SOURCES -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <span class="section-number">§12</span>
+                <h2>Methodology & Sources</h2>
+                <span class="toggle-arrow">▶</span>
+            </div>
+            <div class="section-content">
+                <p style="color: #a0a0a0; margin-bottom: 25px;">Transparency on framework, bias correction, and primary sources underlying all agent-driven analysis.</p>
+
+                <div style="background: #1a1a25; border: 2px solid #00d4aa; border-radius: 8px; padding: 20px; margin-bottom: 25px;">
+                    <h3 style="color: #00d4aa; margin-bottom: 15px; font-size: 1.1em;">6-Phase Analytical Framework</h3>
+                    <div style="background: rgba(0,212,170,0.1); padding: 15px; border-radius: 6px; color: #d0d0d0; font-size: 0.95em; line-height: 1.7;">
+                        <strong>Phase 0:</strong> Consensus Calibration → <strong>Phase 1:</strong> Scoping (NEUTRAL bias) → <strong>Phase 2:</strong> 19 Parallel Agents (balanced: strengths + weaknesses) → <strong>Phase 3:</strong> Adversarial Balance / Red Team (stress-tests BOTH bull and bear) → <strong>Phase 4:</strong> Synthesis with Consensus Deviation Check → <strong>Phase 5:</strong> Interactive HTML Dashboard + Excel Financial Model + Agent Reports → <strong>Phase 6:</strong> QA Audit
+                    </div>
+                </div>
+
+                <div style="background: #1a1a25; border: 2px solid #4ade80; border-radius: 8px; padding: 20px; margin-bottom: 25px;">
+                    <h3 style="color: #4ade80; margin-bottom: 15px; font-size: 1.1em;">v3.0 Key Improvements Over v2.1</h3>
+                    <ul style="color: #d0d0d0; font-size: 0.95em; margin: 0; padding-left: 25px;">
+                        <li style="margin: 10px 0;">20-agent architecture (expanded from 16): added Product Deep-Tech, Developer Ecosystem, Early Warning, Competitive Battlefield</li>
+                        <li style="margin: 10px 0;">110+ analytical dimensions (up from 80+ in v2.1)</li>
+                        <li style="margin: 10px 0;">Consensus anchoring: all fair values validated against Street consensus range</li>
+                        <li style="margin: 10px 0;">Kelly Criterion position sizing with investor-profile-specific strategies</li>
+                        <li style="margin: 10px 0;">Delta Intelligence tab in Excel model: 30+ alternative data signals, edge quantification formulas</li>
+                        <li style="margin: 10px 0;">Data Confidence Matrix: per-agent conviction + data quality scoring</li>
+                        <li style="margin: 10px 0;">Red Team adversarial balance (not just bear — tests BOTH directions)</li>
+                    </ul>
+                </div>
+
+                <div style="background: #1a1a25; border: 2px solid #fbbf24; border-radius: 8px; padding: 20px; margin-bottom: 25px;">
+                    <h3 style="color: #fbbf24; margin-bottom: 15px; font-size: 1.1em;">Systematic Bias Corrections</h3>
+                    <ul style="color: #d0d0d0; font-size: 0.95em; margin: 0; padding-left: 25px;">
+                        <li style="margin: 10px 0;"><strong>Anchoring bias:</strong> Consensus calibration ensures FV doesn't deviate >25% from Street without explicit justification</li>
+                        <li style="margin: 10px 0;"><strong>Confirmation bias:</strong> Each agent scores BOTH strengths AND concerns explicitly</li>
+                        <li style="margin: 10px 0;"><strong>Recency bias:</strong> Historical base rates applied to scenario probabilities (not just recent trends)</li>
+                        <li style="margin: 10px 0;"><strong>Survivorship bias:</strong> Red Team agent specifically challenges base case with historical failure rates</li>
+                        <li style="margin: 10px 0;"><strong>Narrative bias:</strong> Narrative Decoder agent tracks promise delivery rate vs. management claims</li>
+                        <li style="margin: 10px 0;"><strong>Crowding bias:</strong> Quant Positioning agent monitors consensus positioning and crowded-trade risk</li>
+                    </ul>
+                </div>
+
+                <div style="background: #1a1a25; border: 2px solid #60a5fa; border-radius: 8px; padding: 20px; margin-bottom: 25px;">
+                    <h3 style="color: #60a5fa; margin-bottom: 15px; font-size: 1.1em;">Primary Data Sources (150+)</h3>
+                    <p style="color: #d0d0d0; font-size: 0.95em; line-height: 1.7; margin-bottom: 0;">
+                        <strong>SEC EDGAR</strong> (10-K, 10-Q, DEF 14A, Form 4) • <strong>FMP API</strong> • <strong>Yahoo Finance</strong> • <strong>Sensor Tower</strong> (app analytics) • <strong>SimilarWeb</strong> (web traffic) • <strong>Google Trends</strong> • <strong>CBOE/FINRA</strong> (options flow) • <strong>WhaleWisdom</strong> (13F filings) • <strong>OpenInsider</strong> (Form 4 tracking) • <strong>Glassdoor</strong> (employer data) • <strong>FRED</strong> (economic data) • <strong>Company IR</strong> (earnings transcripts, investor presentations) • <strong>Moody's / S&P</strong> (credit ratings) • <strong>Deloitte</strong> (audit reports) • <strong>Nielsen</strong> (viewership) • <strong>Ampere Analysis</strong> (streaming intelligence) • <strong>Third-party ad verification</strong> (CPM/ad load data) • <strong>Production company sources</strong> (content cost intel) • <strong>TechCrunch</strong> • <strong>Bloomberg</strong> • <strong>Variety / Deadline</strong> (entertainment industry)
+                    </p>
+                </div>
+
+                <div style="background: #12121a; border: 2px solid #00d4aa; border-radius: 8px; padding: 20px;">
+                    <div style="font-size: 1.3em; font-weight: bold; color: #00d4aa; margin-bottom: 15px;">Report Metadata</div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div>
+                            <div style="color: #909090; font-size: 0.85em; text-transform: uppercase;">Agents</div>
+                            <div style="color: #ffffff; font-size: 1.5em; font-weight: bold; margin-top: 5px;">20 Independent</div>
+                        </div>
+                        <div>
+                            <div style="color: #909090; font-size: 0.85em; text-transform: uppercase;">Dimensions Analyzed</div>
+                            <div style="color: #ffffff; font-size: 1.5em; font-weight: bold; margin-top: 5px;">110+ Total</div>
+                        </div>
+                        <div>
+                            <div style="color: #909090; font-size: 0.85em; text-transform: uppercase;">Primary Sources</div>
+                            <div style="color: #ffffff; font-size: 1.5em; font-weight: bold; margin-top: 5px;">150+</div>
+                        </div>
+                        <div>
+                            <div style="color: #909090; font-size: 0.85em; text-transform: uppercase;">Report Date</div>
+                            <div style="color: #ffffff; font-size: 1.5em; font-weight: bold; margin-top: 5px;">March 15, 2026</div>
                         </div>
                     </div>
                 </div>
 
-                <h3 style="color: #00d4aa; margin: 30px 0 15px 0; font-size: 1.1em;">Data Confidence Levels</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Data Source</th>
-                            <th>Confidence</th>
-                            <th>Data Age</th>
-                            <th>Quality Assessment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Financial Statements (10-Q/10-K)</td>
-                            <td style="color: #00d4aa; font-weight: 600;">95%</td>
-                            <td>Q4 2025 filed Jan 2026</td>
-                            <td>Audited by Deloitte</td>
-                        </tr>
-                        <tr>
-                            <td>Alt Data (App Analytics, Search Trends)</td>
-                            <td style="color: #ffc800; font-weight: 600;">75%</td>
-                            <td>Real-time + 30-day lag</td>
-                            <td>Sensor Tower, Google Trends</td>
-                        </tr>
-                        <tr>
-                            <td>Insider Activity (Form 4)</td>
-                            <td style="color: #00d4aa; font-weight: 600;">99%</td>
-                            <td>90 days selling activity</td>
-                            <td>SEC filings; $287M confirmed</td>
-                        </tr>
-                        <tr>
-                            <td>Scuttlebutt (Content Spend, Production Costs)</td>
-                            <td style="color: #ffc800; font-weight: 600;">70%</td>
-                            <td>Industry interviews (30 days)</td>
-                            <td>Production company sources</td>
-                        </tr>
-                        <tr>
-                            <td>Ad Business Metrics (CPM, MAU)</td>
-                            <td style="color: #ffc800; font-weight: 600;">80%</td>
-                            <td>Q4 2025 guidance + market data</td>
-                            <td>Third-party ad verification</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3 style="color: #00d4aa; margin: 30px 0 15px 0; font-size: 1.1em;">Methodology & Red Team Process</h3>
-                <p style="color: #e0e0e0; line-height: 1.8; margin: 15px 0;">Analysis conducted by 20-agent consensus architecture: 19 specialized analytical agents (forensic accounting, competitive analysis, macro scenario modeling, etc.) + 1 dedicated red team challenging base case assumptions. Each agent scored on 1-10 scale; consensus score = weighted average. Red team's 6.5/10 conviction reflects skepticism on valuation, tariff risk, and insider selling momentum. Cross-validation: DCF model (11.5x forward EV vs 3.7x market), comparable company analysis (Disney, Amazon at 1.2-1.8x revenue), and sum-of-parts all converge on $95-125 fair value range.</p>
-
-                <p style="color: #e0e0e0; line-height: 1.8; margin: 15px 0;">Key sensitivity: <strong style="color: #00d4aa;">Ad CPM assumption (±$5/CPM = ±$8-10/share)</strong>. If Netflix achieves YouTube-like CPM scale ($40+), upside to $145+. If CPM collapses to $15, downside to $55.</p>
+                <p style="color: #e0e0e0; line-height: 1.8; margin: 25px 0 0 0;">Key sensitivity: <strong style="color: #00d4aa;">Ad CPM assumption (±$5/CPM = ±$8-10/share)</strong>. If Netflix achieves YouTube-like CPM scale ($40+), upside to $145+. If CPM collapses to $15, downside to $55. Cross-validation: DCF model (11.5x forward EV), comparable company analysis (Disney, Amazon at 1.2-1.8x revenue), and sum-of-parts all converge on $95-125 fair value range.</p>
             </div>
         </div>
 
